@@ -12,9 +12,11 @@ public class App {
 
        System.out.println("Starting QCalc..");
 
-       StandardCalculator calc = new StandardCalculator();
+       
+StandardCalculator calc = new StandardCalculator();
 
-       calc.add(1, 2);
+calc.add(1.5, 2.5);
+
 
        System.out.println(calc.getResult());
 
