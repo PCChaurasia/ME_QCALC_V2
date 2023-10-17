@@ -20,5 +20,13 @@ public class App {
 
    }
 
+public Object getGreeting() {
+
+    
+    return new App();
+}
+
+
+
 
 }
