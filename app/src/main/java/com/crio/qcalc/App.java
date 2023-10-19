@@ -13,14 +13,16 @@ public class App {
        System.out.println("Starting QCalc..");
 
        
+
+       
 StandardCalculator calc = new StandardCalculator();
 
-calc.add(1.5, 2.5);
+calc.add(Double.MAX_VALUE, 1.0);
 
-
-       System.out.println(calc.getResult());
+calc.printResult();
 
    }
+       
 
 public Object getGreeting() {
 

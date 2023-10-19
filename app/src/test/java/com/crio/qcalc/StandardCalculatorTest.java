@@ -1,9 +1,13 @@
 package com.crio.qcalc;
 
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+//import org.junit.platform.engine.support.hierarchical.ThrowableCollector.Executable;
+//import org.junit.platform.engine.support.hierarchical.SingleTestExecutor.Executable;
+import org.junit.jupiter.api.function.Executable;
 
 public class StandardCalculatorTest {
     private StandardCalculator standardCalculator;
@@ -54,34 +58,52 @@ public class StandardCalculatorTest {
     // }
 
 
-    @Test
+   
+@Test
 
-    @DisplayName("Test Addition of Two Doubles")
+@DisplayName("Test Addition Overflow of Two Doubles")
 
-    void testAdditionOperationForDoubles() {
+void testAdditionOverflowForDoubles(){
 
-        standardCalculator.add(1.0, 1.5);
+    //Assert
 
-        double actualResult = standardCalculator.getResult();
+    Assertions.assertThrows(ArithmeticException.class,new Executable(){
 
-        Assertions.assertEquals(2.5, actualResult);
+        @Override
 
-    }
+        public void execute() throws Throwable{
+
+            standardCalculator.add(Double.MAX_VALUE, Double.MAX_VALUE);
+
+        }
+
+    });
+
+}
 
 
-    @Test
+@Test
 
-    @DisplayName("Test Subtraction of Two Doubles")
+@DisplayName("Test Subtraction Overflow of Two Doubles")
 
-    void testSubtractionOperationForDoubles() {
+void testSubtractionOverflowForDoubles(){
 
-        standardCalculator.subtract(10.0, 20.5);
+    //Assert
 
-        double actualResult = standardCalculator.getResult();
+    Assertions.assertThrows(ArithmeticException.class,new Executable(){
 
-        Assertions.assertEquals(-10.5, actualResult);
+    @Override
 
-    }
+    public void execute() throws Throwable{
+
+            standardCalculator.subtract(-Double.MAX_VALUE,Double.MAX_VALUE);
+
+        }
+
+    });
+
+}
+
 
 
     @Test
