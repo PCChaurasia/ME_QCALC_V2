@@ -4,7 +4,7 @@ public class StandardCalculator {
 
 
 
-    private double result;
+    protected double result;
 
     public double getResult() {
         return result;
@@ -23,19 +23,25 @@ public class StandardCalculator {
 
     }
 
-    public void printResult() {
+    
 
-        System.out.println("Standard Calculator Result:" + result);
+    public void printResult(){
 
-    }
-
-
-
-    public void add(int num1, int num2) {
-
-        result = num1 + num2;
+        System.out.println("Standard Calculator Result:"+ result);
 
     }
+
+
+
+
+
+   
+ public final void add(int num1, int num2){
+
+    add((double)num1, (double)num2);
+
+}
+
 
     public void subtract(int num1, int num2) {
         result = num1 - num2;
