@@ -93,6 +93,11 @@ public void subtract(double num1, double num2){
 
 
     public void multiply(double num1, double num2) {
+        if(num1 < 0)
+
+        {
+            throw new ArithmeticException("Divide By Zero"); 
+        }
         double result = num1 * num2;
 
         if((result == Double.MAX_VALUE) || (result == Double.POSITIVE_INFINITY)){
