@@ -15,12 +15,15 @@ public class App {
        
 
        
-StandardCalculator calc = new StandardCalculator();
 
-// calc.add(Double.MAX_VALUE, 1.0);
+      
+LogicCalculator calc = new LogicCalculator();
+
+calc.AND(8, 6);
 
 calc.printResult();
 
+       
    }
        
 

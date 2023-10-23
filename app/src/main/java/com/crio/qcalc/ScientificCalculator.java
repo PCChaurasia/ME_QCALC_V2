@@ -1,4 +1,5 @@
 
+
 package com.crio.qcalc;
 
 
@@ -60,10 +61,5 @@ public class ScientificCalculator extends StandardCalculator {
     public void cbrt(double a){
         result = Math.cbrt(a);
     }
-
-
-
-
 }
-
 
