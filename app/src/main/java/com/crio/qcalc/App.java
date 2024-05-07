@@ -12,8 +12,6 @@ public class App {
 
         System.out.println("Starting QCalc..");
 
-
-
         LogicCalculator calc = new LogicCalculator();
 
         calc.AND(8, 6);
