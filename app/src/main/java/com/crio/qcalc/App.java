@@ -8,31 +8,27 @@ package com.crio.qcalc;
 public class App {
 
 
-   public static void main(String[] args) {
+    public static void main(String[] args) {
 
-       System.out.println("Starting QCalc..");
+        System.out.println("Starting QCalc..");
 
-       
 
-       
 
-      
-LogicCalculator calc = new LogicCalculator();
+        LogicCalculator calc = new LogicCalculator();
 
-calc.AND(8, 6);
+        calc.AND(8, 6);
 
-calc.printResult();
+        calc.printResult();
 
-       
-   }
-       
 
-public Object getGreeting() {
+    }
 
-    
-    return new App();
-}
 
+    public Object getGreeting() {
+
+
+        return new App();
+    }
 
 
 
